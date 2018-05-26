@@ -1,4 +1,4 @@
-#code for aggregated csv file#
+#code for aggregated csv file##
 filtered <- read.csv("filtered.csv", sep = "\t")
 filtered[,15:21]<- NULL
 write.csv(filtered, "filter.csv", row.names=FALSE)
