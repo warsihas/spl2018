@@ -7,13 +7,13 @@ if(!require("forecast")) install.packages("forecast", dependencies = TRUE); libr
 
 setwd("C:/Users/Felix/Desktop/Uni/Berlin/2. Semester/spl2018")
 
-a <- read_csv("Robbery_2014_to_2017.csv")
+a <- read_csv("MCI_2014_to_2017.csv")
 b <- read_csv("2016_neighbourhood_profiles.csv")
 
 
 #few values from 2004 and so on..., ts actually starts in 2014 
 a_orig <- a
-a <- a[!(a$occurrencedate <= "2014-01-01"),]
+a <- a[!a$occurrencedate <= "2014-01-01",]
 
 
 MyDatesTable <- table(cut.POSIXt(a$occurrencedate, breaks="day"))
